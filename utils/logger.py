@@ -6,7 +6,7 @@ def setup_logger(name: str) -> logging.Logger:
     logger.setLevel(logging.INFO)
 
     if not logger.handlers:
-        foomatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(message)%s')
+        foomatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(message)s')
         fh = logging.FileHandler(LOG_PATH)
         fh.setFormatter(foomatter)
         logger.addHandler(fh)

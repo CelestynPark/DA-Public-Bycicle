@@ -3,6 +3,9 @@ import requests
 import time
 import json
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+
+load_dotenv()
 
 API_KEY = os.getenv("SEOUL_API_KEY", "6f59656f4463656c32314451414f4a")
 BASE_URL = "http://openapi.seoul.go.kr:8088"

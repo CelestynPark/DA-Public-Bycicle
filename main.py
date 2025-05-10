@@ -7,7 +7,7 @@ if __name__ == '__main__':
     logger.info('main.py 실행 시작')
 
     try:
-        run_preprocess()
+        # run_preprocess()
         run_analysis()
         run_visualization()
     except Exception as e:

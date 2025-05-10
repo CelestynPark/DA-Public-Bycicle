@@ -7,7 +7,7 @@ def setup_logger(name: str) -> logging.Logger:
 
     if not logger.handlers:
         foomatter = logging.Formatter('[%(asctime)s] %(levelname)s - %(message)s')
-        fh = logging.FileHandler(LOG_PATH)
+        fh = logging.FileHandler(LOG_PATH, encoding='utf-8')
         fh.setFormatter(foomatter)
         logger.addHandler(fh)
     

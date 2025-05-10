@@ -8,10 +8,16 @@ from config.settings import (
 from core.data_loader import load_all_json_files
 from core.preprocessing import clean_and_engineer
 from core.analysis import (
-    analyze_by_hour, analyze_by_day, analyze_age_by_hour
+    analyze_by_hour, analyze_by_day, analyze_age_by_hour,
+    analyze_top_station_by_distance,
+    analyze_gender_age_heatmap,
+    analyze_daily_energy_and_carbon
 )
 from core.visualization import (
-    plot_bar, plot_line, plot_scatter, plot_age_hour_heatmap
+    plot_bar, plot_line, plot_scatter, plot_age_hour_heatmap,
+    plot_top_station_distance,
+    plot_gender_age_heatmap,
+    plot_energy_carbon_trend
 )
 from utils.logger import setup_logger
 
@@ -61,6 +67,15 @@ def run_visualization():
         df = pd.read_csv(csv_path)
         pivot_age_hour = analyze_age_by_hour(df)
         plot_age_hour_heatmap(pivot_age_hour, '연령대-시간대별 대여량 히트맵', 'age_hour_heatmap.png')
+
+        top_station_df = analyze_top_station_by_distance(df)
+        plot_top_station_distance(top_station_df, '대여소별 평균 이동거리 Top 10', 'top_station_distance.png')
+
+        pivot_gender_age = analyze_gender_age_heatmap(df)
+        plot_gender_age_heatmap(pivot_gender_age, '성별-연령대별 대여량 히트맵', 'gender_age_heatmap.png')
+
+        df_daily = analyze_daily_energy_and_carbon(df)
+        plot_energy_carbon_trend(df_daily, '일별 소모 칼로리 및 CO₂ 절감량', 'energy_carbon_trend.png')
         
     logger.info("시각화 이미지 저장 완료")
 

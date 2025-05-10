@@ -1,0 +1,15 @@
+# Core Data Processing
+pandas==2.2.2
+
+# Visualization
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# Loggin & CLI
+tqdm==4.66.4
+
+# HTTP Request
+requests==2.31.0
+
+# .env
+python-dotenv==1.0.1

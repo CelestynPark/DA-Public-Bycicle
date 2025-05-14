@@ -15,7 +15,7 @@ FORMAT = "json"
 MAX_ROWS = 1000
 RETRY = 3
 
-OUTPUT_DIR = "output/raw"
+OUTPUT_DIR = "data/raw"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def get_date_range(start: str, end: str):

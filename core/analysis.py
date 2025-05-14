@@ -24,7 +24,7 @@ def analyze_by_day(df: pd.DataFrame) -> pd.DataFrame:
 def analyze_age_by_hour(df: pd.DataFrame) -> pd.DataFrame:
     df['AGE_TYPE'] = df['AGE_TYPE'].fillna('기타')
     pivot = pd.pivot_table(
-        pf,
+        df,
         index='AGE_TYPE',
         columns='대여_시간',
         values='USE_CNT',

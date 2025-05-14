@@ -1,5 +1,5 @@
 import os
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import seaborn as sns
 from config.settings import FIGURE_DIR
 import pandas as pd
@@ -67,7 +67,7 @@ def plot_gender_age_heatmap(pivot_df: pd.DataFrame, title: str, filename: str):
     plt.figure(figsize=(10, 6))
     sns.heatmap(pivot_df, annot=True, fmt='g', cmap='YlOrBr')
     plt.title(title)
-    plt.xlabeL('연령대')
+    plt.xlabel('연령대')
     plt.ylabel('성별')
     plt.tight_layout()
     plt.savefig(os.path.join(FIGURE_DIR, filename))

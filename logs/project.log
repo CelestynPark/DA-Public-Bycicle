@@ -56,3 +56,53 @@
 [2025-05-07 23:15:45,721] INFO - VISUALIZATION START
 [2025-05-07 23:15:45,728] ERROR - 실행 중 오류 발생: 'module' object is not callable
 [2025-05-07 23:15:45,728] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:05:10,489] INFO - main.py 실행 시작
+[2025-05-13 23:05:10,489] INFO - ANALYSIS START
+[2025-05-13 23:06:54,569] INFO - 분석 결과 저장 완료
+[2025-05-13 23:06:55,453] INFO - VISUALIZATION START
+[2025-05-13 23:06:55,460] ERROR - 실행 중 오류 발생: 'module' object is not callable
+[2025-05-13 23:06:55,460] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:14:39,351] INFO - main.py 실행 시작
+[2025-05-13 23:14:39,351] INFO - VISUALIZATION START
+[2025-05-13 23:14:39,359] ERROR - 실행 중 오류 발생: 'module' object is not callable
+[2025-05-13 23:14:39,359] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:15:13,637] INFO - main.py 실행 시작
+[2025-05-13 23:15:13,637] INFO - VISUALIZATION START
+[2025-05-13 23:15:13,641] ERROR - 실행 중 오류 발생: 'module' object is not callable
+[2025-05-13 23:15:13,641] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:19:06,524] INFO - main.py 실행 시작
+[2025-05-13 23:19:06,525] INFO - VISUALIZATION START
+[2025-05-13 23:19:06,528] ERROR - 실행 중 오류 발생: 'module' object is not callable
+[2025-05-13 23:19:06,528] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:19:38,800] INFO - main.py 실행 시작
+[2025-05-13 23:19:38,800] INFO - VISUALIZATION START
+[2025-05-13 23:19:38,804] ERROR - 실행 중 오류 발생: 'module' object is not callable
+[2025-05-13 23:19:38,804] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:20:27,360] INFO - main.py 실행 시작
+[2025-05-13 23:20:27,360] INFO - VISUALIZATION START
+[2025-05-13 23:20:27,364] ERROR - 실행 중 오류 발생: 'module' object is not callable
+[2025-05-13 23:20:27,364] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:20:37,161] INFO - main.py 실행 시작
+[2025-05-13 23:20:37,161] INFO - VISUALIZATION START
+[2025-05-13 23:20:37,165] ERROR - 실행 중 오류 발생: 'module' object is not callable
+[2025-05-13 23:20:37,165] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:20:51,731] INFO - main.py 실행 시작
+[2025-05-13 23:20:51,732] INFO - VISUALIZATION START
+[2025-05-13 23:20:51,735] ERROR - 실행 중 오류 발생: 'module' object is not callable
+[2025-05-13 23:20:51,736] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:21:13,947] INFO - main.py 실행 시작
+[2025-05-13 23:21:13,947] INFO - VISUALIZATION START
+[2025-05-13 23:22:56,102] ERROR - 실행 중 오류 발생: name 'pf' is not defined
+[2025-05-13 23:22:57,067] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:24:13,095] INFO - main.py 실행 시작
+[2025-05-13 23:24:13,095] INFO - VISUALIZATION START
+[2025-05-13 23:25:55,607] ERROR - 실행 중 오류 발생: name 'pf' is not defined
+[2025-05-13 23:25:56,448] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:31:45,958] INFO - main.py 실행 시작
+[2025-05-13 23:31:45,958] INFO - VISUALIZATION START
+[2025-05-13 23:33:51,254] ERROR - 실행 중 오류 발생: module 'matplotlib.pyplot' has no attribute 'xlabeL'
+[2025-05-13 23:33:52,327] INFO - 전체 분석 파이프라인 완료
+[2025-05-13 23:55:51,000] INFO - main.py 실행 시작
+[2025-05-13 23:55:51,000] INFO - VISUALIZATION START
+[2025-05-13 23:58:41,290] ERROR - 실행 중 오류 발생: datetime64 type does not support sum operations
+[2025-05-13 23:58:42,919] INFO - 전체 분석 파이프라인 완료

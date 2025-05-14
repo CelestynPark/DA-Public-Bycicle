@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
     try:
         # run_preprocess()
-        run_analysis()
+        # run_analysis()
         run_visualization()
     except Exception as e:
         logger.error(f"실행 중 오류 발생: {e}")

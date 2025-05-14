@@ -59,17 +59,17 @@ def run_visualization():
     df_hour = pd.read_csv(os.path.join(SUMMARY_DIR, 'by_hour.csv'))
     df_day = pd.read_csv(os.path.join(SUMMARY_DIR, 'by_day.csv'))
 
-    plot_bar(df_day, '대여_요일', '대여건수', '요일별 대여량', 'day_bar.png')
-    plot_line(df_hour, '대여_시간', '대여건수', '시간대별 대여량', 'hour_line.png')
+    # plot_bar(df_day, '대여_요일', '대여건수', '요일별 대여량', 'day_bar.png')
+    # plot_line(df_hour, '대여_시간', '대여건수', '시간대별 대여량', 'hour_line.png')
 
     csv_path = os.path.join(DATA_PROCESSED_DIR, PROCESSED_CSV_FILENAME)
     if os.path.exists(csv_path):
         df = pd.read_csv(csv_path)
-        pivot_age_hour = analyze_age_by_hour(df)
-        plot_age_hour_heatmap(pivot_age_hour, '연령대-시간대별 대여량 히트맵', 'age_hour_heatmap.png')
+        # pivot_age_hour = analyze_age_by_hour(df)
+        # plot_age_hour_heatmap(pivot_age_hour, '연령대-시간대별 대여량 히트맵', 'age_hour_heatmap.png')
 
-        top_station_df = analyze_top_station_by_distance(df)
-        plot_top_station_distance(top_station_df, '대여소별 평균 이동거리 Top 10', 'top_station_distance.png')
+        # top_station_df = analyze_top_station_by_distance(df)
+        # plot_top_station_distance(top_station_df, '대여소별 평균 이동거리 Top 10', 'top_station_distance.png')
 
         pivot_gender_age = analyze_gender_age_heatmap(df)
         plot_gender_age_heatmap(pivot_gender_age, '성별-연령대별 대여량 히트맵', 'gender_age_heatmap.png')

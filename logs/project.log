@@ -106,3 +106,131 @@
 [2025-05-13 23:55:51,000] INFO - VISUALIZATION START
 [2025-05-13 23:58:41,290] ERROR - 실행 중 오류 발생: datetime64 type does not support sum operations
 [2025-05-13 23:58:42,919] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 17:27:55,379] INFO - main.py 실행 시작
+[2025-05-15 17:27:55,379] INFO - VISUALIZATION START
+[2025-05-15 17:29:57,633] ERROR - 실행 중 오류 발생: datetime64 type does not support sum operations
+[2025-05-15 17:29:58,722] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 17:35:18,762] INFO - main.py 실행 시작
+[2025-05-15 17:35:18,762] INFO - VISUALIZATION START
+[2025-05-15 17:37:03,936] ERROR - 실행 중 오류 발생: name 'p' is not defined
+[2025-05-15 17:37:04,973] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 17:39:14,301] INFO - main.py 실행 시작
+[2025-05-15 17:39:14,301] INFO - VISUALIZATION START
+[2025-05-15 17:39:58,722] INFO - main.py 실행 시작
+[2025-05-15 17:39:58,722] INFO - VISUALIZATION START
+[2025-05-15 17:41:44,814] ERROR - 실행 중 오류 발생: module 'pandas' has no attribute 'dread_csv'
+[2025-05-15 17:41:45,800] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 17:43:15,077] INFO - main.py 실행 시작
+[2025-05-15 17:43:15,077] INFO - VISUALIZATION START
+[2025-05-15 17:45:07,724] ERROR - 실행 중 오류 발생: You are trying to merge on int64 and object columns for key 'RENT_ID'. If you wish to proceed you should use pd.concat
+[2025-05-15 17:45:08,948] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 17:49:16,996] INFO - main.py 실행 시작
+[2025-05-15 17:49:16,996] INFO - VISUALIZATION START
+[2025-05-15 17:51:04,935] INFO - 시각화 이미지 저장 완료
+[2025-05-15 17:51:06,069] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 17:57:14,830] INFO - main.py 실행 시작
+[2025-05-15 17:57:14,831] INFO - VISUALIZATION START
+[2025-05-15 17:59:16,730] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 17:59:17,856] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:01:24,263] INFO - main.py 실행 시작
+[2025-05-15 18:01:24,264] INFO - VISUALIZATION START
+[2025-05-15 18:03:10,486] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:03:11,326] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:12:07,385] INFO - main.py 실행 시작
+[2025-05-15 18:12:07,385] INFO - VISUALIZATION START
+[2025-05-15 18:14:00,051] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:14:01,252] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:16:38,915] INFO - main.py 실행 시작
+[2025-05-15 18:16:38,916] INFO - VISUALIZATION START
+[2025-05-15 18:18:30,547] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:18:31,557] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:21:00,808] INFO - main.py 실행 시작
+[2025-05-15 18:21:00,808] INFO - VISUALIZATION START
+[2025-05-15 18:21:00,823] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:21:00,823] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:22:34,938] INFO - main.py 실행 시작
+[2025-05-15 18:22:34,938] INFO - VISUALIZATION START
+[2025-05-15 18:22:34,953] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:22:34,954] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:23:18,867] INFO - main.py 실행 시작
+[2025-05-15 18:23:18,867] INFO - VISUALIZATION START
+[2025-05-15 18:23:18,882] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:23:18,882] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:23:51,199] INFO - main.py 실행 시작
+[2025-05-15 18:23:51,199] INFO - VISUALIZATION START
+[2025-05-15 18:23:51,224] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:23:51,224] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:25:17,070] INFO - main.py 실행 시작
+[2025-05-15 18:25:17,070] INFO - VISUALIZATION START
+[2025-05-15 18:25:17,096] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:25:17,096] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:25:44,436] INFO - main.py 실행 시작
+[2025-05-15 18:25:44,436] INFO - VISUALIZATION START
+[2025-05-15 18:25:44,472] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:25:44,472] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:26:03,309] INFO - main.py 실행 시작
+[2025-05-15 18:26:03,310] INFO - VISUALIZATION START
+[2025-05-15 18:26:03,347] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:26:03,347] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:27:17,762] INFO - main.py 실행 시작
+[2025-05-15 18:27:17,762] INFO - VISUALIZATION START
+[2025-05-15 18:27:17,788] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:27:17,789] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:29:14,709] INFO - main.py 실행 시작
+[2025-05-15 18:29:14,709] INFO - VISUALIZATION START
+[2025-05-15 18:29:14,734] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:29:14,734] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:30:39,511] INFO - main.py 실행 시작
+[2025-05-15 18:30:39,511] INFO - VISUALIZATION START
+[2025-05-15 18:30:39,535] ERROR - 실행 중 오류 발생: 'use_CNT'
+[2025-05-15 18:30:39,535] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:31:33,005] INFO - main.py 실행 시작
+[2025-05-15 18:31:33,005] INFO - VISUALIZATION START
+[2025-05-15 18:31:33,032] ERROR - 실행 중 오류 발생: 'int' object is not subscriptable
+[2025-05-15 18:31:33,032] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:32:50,747] INFO - main.py 실행 시작
+[2025-05-15 18:32:50,748] INFO - VISUALIZATION START
+[2025-05-15 18:32:50,772] ERROR - 실행 중 오류 발생: too many values to unpack (expected 2)
+[2025-05-15 18:32:50,773] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:33:31,089] INFO - main.py 실행 시작
+[2025-05-15 18:33:31,089] INFO - VISUALIZATION START
+[2025-05-15 18:33:31,116] ERROR - 실행 중 오류 발생: 'int' object is not subscriptable
+[2025-05-15 18:33:31,116] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:34:12,019] INFO - main.py 실행 시작
+[2025-05-15 18:34:12,019] INFO - VISUALIZATION START
+[2025-05-15 18:34:12,046] ERROR - 실행 중 오류 발생: 'int' object is not subscriptable
+[2025-05-15 18:34:12,046] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:35:02,520] INFO - main.py 실행 시작
+[2025-05-15 18:35:02,520] INFO - VISUALIZATION START
+[2025-05-15 18:35:42,875] INFO - main.py 실행 시작
+[2025-05-15 18:35:42,875] INFO - VISUALIZATION START
+[2025-05-15 18:35:42,902] ERROR - 실행 중 오류 발생: 'RENT_NM'
+[2025-05-15 18:35:42,902] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 18:36:26,707] INFO - main.py 실행 시작
+[2025-05-15 18:36:26,707] INFO - VISUALIZATION START
+[2025-05-15 18:36:31,036] INFO - 시각화 이미지 저장 완료
+[2025-05-15 18:36:31,036] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 23:20:08,961] INFO - main.py 실행 시작
+[2025-05-15 23:20:08,962] INFO - VISUALIZATION START
+[2025-05-15 23:20:08,962] ERROR - 실행 중 오류 발생: _path_exists() takes at most 1 argument (2 given)
+[2025-05-15 23:20:08,962] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 23:20:52,136] INFO - main.py 실행 시작
+[2025-05-15 23:20:52,136] INFO - VISUALIZATION START
+[2025-05-15 23:20:52,137] INFO - 시각화 이미지 저장 완료
+[2025-05-15 23:20:52,137] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 23:21:11,127] INFO - main.py 실행 시작
+[2025-05-15 23:21:11,127] INFO - VISUALIZATION START
+[2025-05-15 23:21:11,492] ERROR - 실행 중 오류 발생: Could not interpret value `대여_요일` for `x`. An entry with this name does not appear in `data`.
+[2025-05-15 23:21:11,492] INFO - 전체 분석 파이프라인 완료
+[2025-05-15 23:23:50,230] INFO - main.py 실행 시작
+[2025-05-15 23:23:50,230] INFO - VISUALIZATION START
+[2025-05-15 23:23:50,908] INFO - 시각화 이미지 저장 완료
+[2025-05-15 23:23:50,909] INFO - 전체 분석 파이프라인 완료
+[2025-05-17 13:08:21,330] INFO - main.py 실행 시작
+[2025-05-17 13:08:21,330] INFO - 데이터 품질 점검 시작
+[2025-05-17 13:09:53,530] INFO - 누락된 날짜 점검:
+[2025-05-17 13:10:05,192] INFO - 이상치 점검:
+[2025-05-17 13:10:05,336] INFO - 중복 행 점검:
+[2025-05-17 13:10:17,708] INFO - 주요 컬럼 결측률 점검:
+[2025-05-17 13:10:17,708] ERROR - 실행 중 오류 발생: check_missing_columns() missing 1 required positional argument: 'cols'
+[2025-05-17 13:10:18,775] INFO - 전체 분석 파이프라인 완료

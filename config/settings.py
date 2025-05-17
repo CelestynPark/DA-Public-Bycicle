@@ -9,3 +9,4 @@ SUMMARY_DIR = os.path.join(BASE_DIR, 'outputs', 'summary')
 LOG_PATH = os.path.join(BASE_DIR, 'logs', 'project.log')
 
 PROCESSED_CSV_FILENAME = 'bike_cleaned.csv'
+STATION_CSV_FILENAME = 'station_location.csv'

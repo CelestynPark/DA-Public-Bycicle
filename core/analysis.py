@@ -1,5 +1,9 @@
 import pandas as pd
 from utils.logger import setup_logger
+import os
+from config.settings import (
+    DATA_PROCESSED_DIR, STATION_CSV_FILENAME
+)
 
 logger = setup_logger(__name__)
 
@@ -71,3 +75,26 @@ def analyze_daily_energy_and_carbon(df:pd.DataFrame) -> pd.DataFrame:
         .sort_values('RENT_DT')
     )
     return result
+
+def analyze_station_usage_with_location(df: pd.DataFrame) -> pd.DataFrame:
+    group_cols = ['RENT_ID', 'RENT_NM']
+    value_cols = ['USE_CNT', 'MOVE_METER']
+
+    df_grouped = (
+        df[group_cols + value_cols]
+        .groupby(group_cols)
+        .sum()
+        .reset_index()
+    )
+
+    df_grouped['평균이동거리'] = df_grouped["MOVE_METER"] / df_grouped['USE_CNT']
+    
+    loc_df = pd.read_csv(os.path.join(DATA_PROCESSED_DIR, STATION_CSV_FILENAME))
+
+    merged = pd.merge(df_grouped, loc_df, on="RENT_ID", how="inner")
+    print(merged.head())
+    print(merged.describe())
+    
+    output_path = os.path.join("outputs", "summary", "merged_locations.csv")
+    merged.to_csv(output_path)
+    return merged

@@ -3,6 +3,18 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from config.settings import FIGURE_DIR
 import pandas as pd
+import folium
+from folium.plugins import MarkerCluster
+import platform
+
+if platform.system() == 'Windows':
+    plt.rcParams['font.family'] = 'Malgun Gothic'
+elif platform.system() == 'Darwin':
+    plt.rcParams['font.family'] = 'AppleGothic'
+else:
+    plt.rcParams['font.family'] = 'NanumGothic'
+
+plt.rcParams['axes.unicode_minus'] = False
 
 def plot_bar(df, x, y, title, filename):
     plt.figure(figsize=(10, 6))
@@ -84,3 +96,25 @@ def plot_energy_carbon_trend(df: pd.DataFrame, title: str, filename: str):
     plt.tight_layout()
     plt.savefig(os.path.join(FIGURE_DIR, filename))
     plt.close()
+
+def plot_station_map(df: pd.DataFrame, filename: str = 'station_map.html'):
+    m = folium.Map(location=[37.5665, 126.9780], zoom_start=14)
+    cluster = MarkerCluster().add_to(m)
+    
+    for _, row in df.iterrows():
+        lat, lng = row['LAT'], row['LONG']
+        folium.CircleMarker(
+            location=(lat, lng),
+            radius=max(min(row['USE_CNT'] / 5000, 15), 5),
+            color='black',
+            fill=True,
+            fill_color='orange',
+            fill_opacity=0.7,
+            popup=folium.Popup(
+                f"<b>{row['RENT_NM_x']}</b><br>이용수: {int(row['USE_CNT'])}<br>평균거리: {row['평균이동거리']: 1f}m",
+                max_width=250
+            )
+        ).add_to(cluster)
+
+    output_path = os.path.join(FIGURE_DIR, filename)
+    m.save(output_path)

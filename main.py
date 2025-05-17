@@ -1,4 +1,4 @@
-from cli.main import run_preprocess, run_analysis, run_visualization
+from cli.main import run_preprocess, run_analysis, run_visualization, run_quality_check
 from utils.logger import setup_logger
 
 logger = setup_logger(__name__)
@@ -9,7 +9,8 @@ if __name__ == '__main__':
     try:
         # run_preprocess()
         # run_analysis()
-        run_visualization()
+        # run_visualization()
+        run_quality_check()
     except Exception as e:
         logger.error(f"실행 중 오류 발생: {e}")
     

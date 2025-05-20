@@ -1,15 +1,18 @@
 # 서울시 공공자전거 이용 분석 프로젝트
 
-서울시 공공자전거(따릉이) 데이터를 활용하여, 시간대, 요일, 성별, 연령대, 대여소 등의 다양한 조건에서 대여 패턴을 분석하고 시각화하는 프로젝트이다.
+서울시 공공자전거(따릉이) 데이터를 활용하여, 시간대, 요일, 성별, 연령대, 대여소 등의 다양한 조건에서 대여 패턴을 분석 및 시각화하고
+AI를 통한 자연어 질의응답까지 가능한 실전 데이터 분석 프로젝트이다.
 
 ---
 
-## 프로젝트
+## 프로젝트 개요
 
-- **데이터 출처**: 서울열린데이터광장
-- **데이터 형식**: 월별 JSON (예: `202401.json`)
-- **분석 대상 기간**: 2024년 월 ~ 2025년 4월
-- **활용 기술**: Python (Pandas, matplotlib, seaborn), CLI 기반 실행, 모듈화 구조
+- **데이터 출처**: [서울열린데이터광장](https://data.seoul.go.kr)
+- **수집 대상**:
+  - 시간대별 이용정보: `tbCycleRentUseTimeInfo` API
+  - 대여소 위치정보: `tbCycleStationInfo` API
+- **분석 대상 기간**: 2024년 1월 ~ 2025년 4월
+- **기술 스택**: Python, Pandas, Matplotlib, Seaborn, Folium, Streamlit, CLI 기반 실행, OpenAI GPT-4
 
 ---
 
@@ -17,9 +20,13 @@
 
 ```
 da-public_bicycle/
+├── .env                # API 키
 ├── Readme.md           # 프로젝트 문서
 ├── requirements.txt    # 설치 패키지 목록
+├── dashboard.py        # Streamlit 대시보드
+├── chatbot.py          # Streamlit 기반 AI 질의 응답 UI
 ├── main.py             # 전체 자동 실행용 메인
+├── chat/               # AI 질문 응답 처리
 ├── cli/                # CLI 실행 진입점 및 실행 함수
 │   ├── main.py         # argparse CLI
 │   └── __ini__.py      # main.py에서 함수 임포트용
@@ -65,22 +72,22 @@ SEOUL_API_KEY=서울시OpenAPI키
 
 ### 3. 데이터 수집 (크롤링)
 
-서울열린데이터광장의 공공자전거 시간대별 API를 통해 월별 JSON 파일을 수집한다.
+서울열린데이터광장의 공공자전거 시간대별 API와 자전거 대여소 위치 정보 API를 통해 월별 JSON 파일을 수집한다.
 
 #### 실행 방법
 
 ```bash
+# 월별 JSON 수집
 python scripts/crawler.py
-```
 
-- 기본 저장 경로: data/raw/{YYYYMM}.json
-- 기간: 2024년 1월 ~ 2025년 4월
-- 하루 24시간, 최대 1000건 단위로 분할 수집
-- API 요청 실패 시 최대 3회 재시도
+# 대여소 위치정보 수집 (병렬 처리)
+python scripts/crawl_station_locations.py
+```
 
 ### 4. 전체 파이프라인 실행
 
 ```bash
+# 전처리 → 분석 → 시각화 순차 실행
 python main.py
 ```
 
@@ -90,6 +97,7 @@ python main.py
 python cli/main.py --mode preprocess    # 전처리 실행
 python cli/main.py --mode analyze       # 분석 CSV 생성
 python cli/main.py --mode visualize     # 시각화 이미지 생성
+python cli/main.py --mode quality       # 품질 점검
 ```
 
 ---
@@ -123,13 +131,44 @@ python cli/main.py --mode visualize     # 시각화 이미지 생성
 
 ---
 
+## 웹 대시보드
+
+### 시각화 대시보드 (Streamlit)
+
+```bash
+streamlit run dashboard.py
+```
+
+* 분석 결과 이미지 or 실시간 그래프 보기 가능
+
+### AI 분석 챗봇
+
+```bash
+streamlit run chatbot.py
+```
+
+* 자연어 질문 입력 → GPT가 분석 데ㅣㅇ터를 요약해 응답
+
+예:
+
+```
+"어떤 요일에 대여량이 가장 많나요?"
+"운동량과 단소 절감량은 어떻게 바뀌나요?"
+```
+
+---
+
 ## 사용된 주요 기술
 
-| 구분        | 기술                                |
+| 구분        | 기능                                |
 | ----------- | ----------------------------------- |
-| 데이터 처리 | pandas, json                        |
-| 시각화      | matplotlib, seaborn                 |
+| 데이터 수집  | 공공자전거 월별 이용 정보, 대펴소 좌표 API 자동 수집 (병렬 처리 포함) |
+| 데이터 전처리 | 이상값 필터링, 시간/요일 파생 컬럼 생성 |
+| 분석 기능 | 시간대별, 요일별, 연령대별, 성별, 대여소별 분석 |
+| 시각화      | bar/line/scatter/heatmap + folium 지도 |
 | 실행 관리   | argparse, logging                   |
+| 품질 점검 | 누락 날짜, 이상값, 중복 행, 결측률 확인 |
+| AI 응답 | GPT-4 기반 자연어 질의 응답 시스템 (분석 데이터 기반 요약 응답) |
 | 구조화      | 모듈 기반 CLI 구조, main entry 분리 |
 
 ---

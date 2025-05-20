@@ -147,7 +147,7 @@ streamlit run dashboard.py
 streamlit run chatbot.py
 ```
 
-* 자연어 질문 입력 → GPT가 분석 데ㅣㅇ터를 요약해 응답
+* 자연어 질문 입력 → GPT가 분석 데이터를 요약해 응답
 
 예:
 
